@@ -1,0 +1,280 @@
+!SESSION 2020-10-09 11:17:46.610 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -data C:\Users\Etudiant\Documents\SALAZAR_SANOGO_BINOME7\SOPC_BE_Q11 -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-10-09 11:18:42.220
+!MESSAGE Indexed 'be_project_bsp' (78 sources, 57 headers) in 0,65 sec: 926 declarations; 2 209 references; 113 unresolved inclusions; 5 syntax errors; 195 unresolved names (5,86 %)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2020-10-09 11:18:45.892
+!MESSAGE Could not save the project location for 'be_project'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(null)[566]: java.io.FileNotFoundException: C:\Users\Etudiant\Documents\SALAZAR_SANOGO_BINOME7\SOPC_BE_Q11\.metadata\.plugins\org.eclipse.core.resources\.projects\be_project\.location (Accès refusé)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:43)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:39)
+	at org.eclipse.core.internal.resources.LocalMetaArea.writePrivateDescription(LocalMetaArea.java:398)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.internalWrite(FileSystemResourceManager.java:525)
+	at org.eclipse.core.internal.resources.Project.writeDescription(Project.java:1325)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1214)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1238)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider$DesApplyRunnable.run(ConfigurationDataProvider.java:98)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$CompositeWorkspaceRunnable.run(CProjectDescriptionManager.java:198)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$CompositeWorkspaceRunnable.run(CProjectDescriptionManager.java:198)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$5.run(CProjectDescriptionManager.java:501)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.runAtomic(CProjectDescriptionManager.java:498)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.runWspModification(CProjectDescriptionManager.java:463)
+	at org.eclipse.cdt.internal.core.settings.model.SetCProjectDescriptionOperation.executeOperation(SetCProjectDescriptionOperation.java:155)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:338)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:603)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.settings.model.AbstractCProjectDescriptionStorage.setProjectDescription(AbstractCProjectDescriptionStorage.java:203)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionStorageManager.setProjectDescription(CProjectDescriptionStorageManager.java:147)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:836)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:806)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:801)
+	at org.eclipse.cdt.core.CCorePlugin.setProjectDescription(CCorePlugin.java:1153)
+	at org.eclipse.cdt.core.CCorePlugin$3.run(CCorePlugin.java:800)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.core.CCorePlugin.createCDTProject(CCorePlugin.java:758)
+	at org.eclipse.cdt.core.CCorePlugin.convertProjectToNewCC(CCorePlugin.java:877)
+	at com.altera.sbtgui.project.importer.Importer.importProject(Importer.java:163)
+	at com.altera.sbtgui.project.importer.Importer.importProject(Importer.java:108)
+	at com.altera.sbtgui.ui.wizards.NewSbtGuiProject$1.run(NewSbtGuiProject.java:106)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 566 2020-10-09 11:18:45.893
+!MESSAGE Could not save the project location for 'be_project'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Etudiant\Documents\SALAZAR_SANOGO_BINOME7\SOPC_BE_Q11\.metadata\.plugins\org.eclipse.core.resources\.projects\be_project\.location (Accès refusé)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:43)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:39)
+	at org.eclipse.core.internal.resources.LocalMetaArea.writePrivateDescription(LocalMetaArea.java:398)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.internalWrite(FileSystemResourceManager.java:525)
+	at org.eclipse.core.internal.resources.Project.writeDescription(Project.java:1325)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1214)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1238)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider$DesApplyRunnable.run(ConfigurationDataProvider.java:98)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$CompositeWorkspaceRunnable.run(CProjectDescriptionManager.java:198)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$CompositeWorkspaceRunnable.run(CProjectDescriptionManager.java:198)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$5.run(CProjectDescriptionManager.java:501)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.runAtomic(CProjectDescriptionManager.java:498)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.runWspModification(CProjectDescriptionManager.java:463)
+	at org.eclipse.cdt.internal.core.settings.model.SetCProjectDescriptionOperation.executeOperation(SetCProjectDescriptionOperation.java:155)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:338)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:603)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.settings.model.AbstractCProjectDescriptionStorage.setProjectDescription(AbstractCProjectDescriptionStorage.java:203)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionStorageManager.setProjectDescription(CProjectDescriptionStorageManager.java:147)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:836)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:806)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:801)
+	at org.eclipse.cdt.core.CCorePlugin.setProjectDescription(CCorePlugin.java:1153)
+	at org.eclipse.cdt.core.CCorePlugin$3.run(CCorePlugin.java:800)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.core.CCorePlugin.createCDTProject(CCorePlugin.java:758)
+	at org.eclipse.cdt.core.CCorePlugin.convertProjectToNewCC(CCorePlugin.java:877)
+	at com.altera.sbtgui.project.importer.Importer.importProject(Importer.java:163)
+	at com.altera.sbtgui.project.importer.Importer.importProject(Importer.java:108)
+	at com.altera.sbtgui.ui.wizards.NewSbtGuiProject$1.run(NewSbtGuiProject.java:106)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-10-09 11:18:46.091
+!MESSAGE Indexed 'be_project' (1 sources, 13 headers) in 0,02 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00 %)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-09 11:37:04.083
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11038 --id=0x0 --timestamp=1602234781]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-09 11:37:07.874
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11038 --id=0x0 --timestamp=1602234781 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+!SESSION 2020-10-13 11:00:44.379 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -data C:\Users\Etudiant\Documents\SALAZAR_SANOGO_BINOME7\SOPC_BE_Q11 -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-13 11:23:04.790
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11048 --id=0x0 --timestamp=1602578474]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-13 11:23:08.905
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11048 --id=0x0 --timestamp=1602578474 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+!SESSION 2020-10-16 09:01:03.496 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -data C:\Users\Etudiant\Documents\SALAZAR_SANOGO_BINOME7\SOPC_BE_Q11 -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:06:20.363
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11028 --id=0x0 --timestamp=1602830698]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:06:24.480
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11028 --id=0x0 --timestamp=1602830698 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+!SESSION 2020-10-16 09:09:43.670 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:10:25.527
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11028 --id=0x0 --timestamp=1602830698]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:10:29.409
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11028 --id=0x0 --timestamp=1602830698 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+!SESSION 2020-10-16 09:16:23.862 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:17:01.625
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11028 --id=0x0 --timestamp=1602830698]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:17:05.496
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11028 --id=0x0 --timestamp=1602830698 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:18:58.541
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:19:01.315
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11028 --id=0x0 --timestamp=1602830698]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:19:05.619
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11028 --id=0x0 --timestamp=1602830698 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:20:05.250
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:20:08.042
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11028 --id=0x0 --timestamp=1602830698]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:20:11.855
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11028 --id=0x0 --timestamp=1602830698 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:21:38.104
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:21:40.816
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11028 --id=0x0 --timestamp=1602830698]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:21:44.891
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11028 --id=0x0 --timestamp=1602830698 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+!SESSION 2020-10-16 09:36:46.973 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:42:18.587
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11038 --id=0x0 --timestamp=1602833519]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:42:22.407
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11038 --id=0x0 --timestamp=1602833519 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:49:27.249
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2020-10-16 09:49:32.622
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2020-10-16 09:50:21.932
+!MESSAGE The system console model is invalid. Cannot launch.
+!SESSION 2020-10-16 09:51:47.954 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-10-16 09:51:48.534
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:52:17.308
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11038 --id=0x0 --timestamp=1602833519]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 09:52:21.088
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11038 --id=0x0 --timestamp=1602833519 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+!SESSION 2020-10-16 10:14:35.735 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 10:15:42.891
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11038 --id=0x0 --timestamp=1602833519]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 10:15:47.035
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11038 --id=0x0 --timestamp=1602833519 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+!SESSION 2020-10-16 10:53:23.588 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 10:56:12.372
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11038 --id=0x0 --timestamp=1602837955]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 10:56:16.177
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11038 --id=0x0 --timestamp=1602837955 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 11:04:29.842
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11038 --id=0x0 --timestamp=1602837955]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 11:04:34.136
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11038 --id=0x0 --timestamp=1602837955 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+!SESSION 2020-10-16 11:06:55.277 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 11:07:34.013
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11038 --id=0x0 --timestamp=1602837955]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 11:07:38.207
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11038 --id=0x0 --timestamp=1602837955 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 11:10:08.512
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11038 --id=0x0 --timestamp=1602837955]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 11:10:12.255
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11038 --id=0x0 --timestamp=1602837955 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 11:17:30.902
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11038 --id=0x0 --timestamp=1602837955]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 11:17:34.864
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11038 --id=0x0 --timestamp=1602837955 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 11:23:01.921
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x11038 --id=0x0 --timestamp=1602837955]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2020-10-16 11:23:05.892
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x11038 --id=0x0 --timestamp=1602837955 /cygdrive/c/Users/Etudiant/Documents/SALAZAR_SANOGO_BINOME7/SOPC_BE_Q11/software/be_project/be_project.elf]

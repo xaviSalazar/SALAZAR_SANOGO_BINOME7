@@ -1,0 +1,43 @@
+|Compteur
+clk => clk_1Hz.CLK
+clk => count_1Hz[26].CLK
+clk => count_1Hz[25].CLK
+clk => count_1Hz[24].CLK
+clk => count_1Hz[23].CLK
+clk => count_1Hz[22].CLK
+clk => count_1Hz[21].CLK
+clk => count_1Hz[20].CLK
+clk => count_1Hz[19].CLK
+clk => count_1Hz[18].CLK
+clk => count_1Hz[17].CLK
+clk => count_1Hz[16].CLK
+clk => count_1Hz[15].CLK
+clk => count_1Hz[14].CLK
+clk => count_1Hz[13].CLK
+clk => count_1Hz[12].CLK
+clk => count_1Hz[11].CLK
+clk => count_1Hz[10].CLK
+clk => count_1Hz[9].CLK
+clk => count_1Hz[8].CLK
+clk => count_1Hz[7].CLK
+clk => count_1Hz[6].CLK
+clk => count_1Hz[5].CLK
+clk => count_1Hz[4].CLK
+clk => count_1Hz[3].CLK
+clk => count_1Hz[2].CLK
+clk => count_1Hz[1].CLK
+clk => count_1Hz[0].CLK
+rst => ~NO_FANOUT~
+busLed[0] <= number[0].DB_MAX_OUTPUT_PORT_TYPE
+busLed[1] <= number[1].DB_MAX_OUTPUT_PORT_TYPE
+busLed[2] <= number[2].DB_MAX_OUTPUT_PORT_TYPE
+busLed[3] <= number[3].DB_MAX_OUTPUT_PORT_TYPE
+SeptSegments[6] <= SeptSegments~45.DB_MAX_OUTPUT_PORT_TYPE
+SeptSegments[5] <= SeptSegments~44.DB_MAX_OUTPUT_PORT_TYPE
+SeptSegments[4] <= SeptSegments~43.DB_MAX_OUTPUT_PORT_TYPE
+SeptSegments[3] <= SeptSegments~42.DB_MAX_OUTPUT_PORT_TYPE
+SeptSegments[2] <= SeptSegments~41.DB_MAX_OUTPUT_PORT_TYPE
+SeptSegments[1] <= SeptSegments~40.DB_MAX_OUTPUT_PORT_TYPE
+SeptSegments[0] <= SeptSegments~39.DB_MAX_OUTPUT_PORT_TYPE
+
+

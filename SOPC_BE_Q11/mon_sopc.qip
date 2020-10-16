@@ -1,0 +1,19 @@
+# clk_0
+# cpu_0
+set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu_0.sdc]
+set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu_0.ocp]
+# sram
+# jtag_uart_0
+# sysid
+# avalon_pwm_0
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) avalon_pwm_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) avalon_pwm.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) avalon_pwm_0.vhd]
+# switchs_config
+# avalon_gestion_anemo_0
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) avalon_gestion_anemo_hw.tcl]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) avalon_gestion_anemo.vhd]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) avalon_gestion_anemo_0.vhd]
+# null
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 00000000000000E0000001753096AFD9 
+ 

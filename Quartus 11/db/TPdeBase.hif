@@ -1,0 +1,43 @@
+Quartus II
+Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+15
+1223
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+TPdeBase
+# storage
+db|TPdeBase.(0).cnf
+db|TPdeBase.(0).cnf
+# case_insensitive
+# source_file
+db|tpdebase.bdf
+8bbb17b8ede13576d1ea9fb27f9af39
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+
