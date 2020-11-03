@@ -1,0 +1,211 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_unsigned.ALL;
+
+ENTITY nmea_tx IS
+
+port (
+clk, chipselect, write_n, reset_n: in std_logic;
+ address: in std_logic_vector (2 downto 0);
+writedata : in std_logic_vector (31 downto 0);
+txd, done_probe: out std_logic;
+readdata : out std_logic_vector (31 downto 0)
+);
+END nmea_tx;
+
+ARCHITECTURE arch_nmea_tx OF nmea_tx IS
+signal s_count : integer range 0 to 651;
+signal s_clk16, done, start, fin_tx : std_logic;
+signal  raz_n  : std_logic;
+ signal s_count16 : std_logic_vector (3 downto 0);
+ signal count_bit : std_logic_vector (5 downto 0);
+ signal d_s , d_h, d_m, d_l  : std_logic_vector(7 downto 0);
+ signal config : std_logic_vector (2 downto 0);
+ signal tmp : std_logic_vector (40 downto 0);
+ signal etat_nios: integer range 1 to 3;
+ 
+BEGIN
+
+--0000000000000000000000000000000000000000000000000000000000000000
+--*************************************************
+-- création de la data à transmettre: data_tx
+--*************************************************
+--data_tx <= '0'&data_s(7 downto 0)&'1'&'0'&d_h(7 downto 0)&'1'&'0'&d_m(7 downto 0)&'1'&'0'&d_l(7 downto 0)&'1';
+--0000000000000000000000000000000000000000000000000000000000000000
+
+done_probe <= done;
+
+
+--0000000000000000000000000000000000000000000000000000000000000000
+--*************************************************
+-- process generation horloge à 76800 hz à partir 50MHz
+--*************************************************
+	gen_clk16 : PROCESS (clk, raz_n)
+	BEGIN
+       IF raz_n = '0' THEN
+          s_count <= 0;
+       ELSIF clk'EVENT AND clk = '1' THEN
+         if s_count = 650 then
+			s_count <= 0;
+			s_clk16 <= '1';
+		else
+			s_count <= s_count+1;
+			s_clk16 <= '0';
+		end if;
+       END IF;
+    END PROCESS;
+--**************************************************
+--0000000000000000000000000000000000000000000000000000000000000000
+
+
+--0000000000000000000000000000000000000000000000000000000000000000
+--**************************************************   
+-- process generation horloge data de 4800 bauds à partir 76800hz
+--*************************************************
+gen_4800: PROCESS (s_clk16, raz_n)
+	BEGIN
+		IF raz_n = '0' THEN
+          s_count16 <= "0000";
+		ELSIF s_clk16'EVENT AND s_clk16 = '1' THEN
+			s_count16 <= s_count16 +  "0001";
+		END IF;
+    END PROCESS;
+--    clk_bit <= s_count16(3);-- pour visu du clock bit
+--*************************************************
+--0000000000000000000000000000000000000000000000000000000000000000
+
+
+
+--0000000000000000000000000000000000000000000000000000000000000000
+--**************************************************
+-- process  comptage des bits émis
+--*************************************************
+comptage_bit: process (done, s_count16(3))
+
+begin
+	if done ='1' then count_bit <= (others =>'0');
+	fin_tx <= '0';
+	elsif s_count16(3) 'event and s_count16(3) = '1' then
+		if  count_bit < "100111"  then count_bit <= count_bit + "000001";
+		else fin_tx <= '1';
+		end if;
+	End if ;
+end process; 
+--******************************************************
+--0000000000000000000000000000000000000000000000000000000000000000
+
+
+
+--0000000000000000000000000000000000000000000000000000000000000000
+--******************************************************
+-- machine à états gestion interface nios
+--*************************************************
+gestion_nios:	process (clk, raz_n)
+	begin 
+	if raz_n ='0' then 
+		etat_nios <= 1;
+		done <='1';
+	elsif clk'event and clk = '1' then
+		case etat_nios is
+		when 1 =>
+			if start ='1' then 
+			etat_nios <=2	;
+			done <= '0';
+			end if;
+		when 2 =>	
+			if fin_tx ='1' then 
+			etat_nios <=3	;
+			done <= '1';
+			end if;
+		when 3 =>	
+			if start ='0' then 
+			etat_nios<=1	;
+			done <= '1';
+			end if;
+		when others =>	etat_nios <=1;
+		end case;
+		
+	end if;
+	end process gestion_nios;
+
+--******************************************************
+--0000000000000000000000000000000000000000000000000000000000000000
+
+
+
+--0000000000000000000000000000000000000000000000000000000000000000
+--******************************************************
+-- machine à états gestion emission
+--*************************************************
+gestion_emission:	process (s_count16(3), done, d_s, d_h, d_m, d_l )
+	
+	begin 
+	if done = '1' then 
+          tmp <= '1'&D_l&'0'&'1'&D_m&'0'&'1'&D_h&'0'&'1'&D_s&'0'&'1'; 
+        elsif (s_count16(3)'event and s_count16(3)='1') then 
+          tmp <= '1' & tmp(40 downto 1); 
+        end if; 
+    end process gestion_emission; 
+    txd <= tmp(0);
+	
+
+--******************************************************
+--0000000000000000000000000000000000000000000000000000000000000000
+
+
+--0000000000000000000000000000000000000000000000000000000000000000
+-- 				interface bus avalon
+--******************************************************
+-- écriture registres
+--*******************************************************
+ecriture: process (clk, reset_n)
+	begin
+	if reset_n = '0' then
+	config <= (others => '0');
+	elsif clk'event and clk = '1' then
+		if chipselect ='1' and write_n = '0' then
+			case address is
+			when "000" =>
+			config (2 downto 0)<= (writedata (2 downto 0));
+			when "001" =>
+			d_s (7 downto 0)<= (writedata (7 downto 0));
+			when "010" =>
+			d_h (7 downto 0)<= (writedata (7 downto 0));
+			when "011" =>
+			d_m (7 downto 0)<= (writedata (7 downto 0));
+			when "100" =>
+			d_l (7 downto 0)<= (writedata (7 downto 0));
+			when others => 
+			config <= (others => '0');
+			end case;
+		end if;
+	end if;
+end process ecriture;
+--****************************************************************
+raz_n <= config (0);
+start <= config (1);
+--*****************************************************************
+--	lecture des registres
+--*****************************************************************
+lecture: process (address, done, start, raz_n)
+	begin
+		case address is
+			when "000" =>
+			readdata(2 downto 0) <= done&start&raz_n;
+			when "001" =>
+			readdata(7 downto 0) <= d_s ;
+			when "010" =>
+			readdata(7 downto 0) <= d_h ;
+			when "011" =>
+			readdata(7 downto 0) <= d_m ;
+			when "100" =>
+			readdata(7 downto 0) <= d_l ;
+			when others => 
+			readdata <= (others => '0');
+			end case;
+end process lecture;
+--**********************************************************************
+--00000000000000000000000000000000000000000000000000000000000000000000000
+
+
+end    ARCHITECTURE arch_nmea_tx;

@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk_50M'
+Slack : -2.896
+TNS   : -65.535
+
+Type  : Slow Model Setup 's_clk4800'
+Slack : -1.280
+TNS   : -7.588
+
+Type  : Slow Model Setup 's_clk76800'
+Slack : -0.872
+TNS   : -1.511
+
+Type  : Slow Model Hold 's_clk76800'
+Slack : -2.974
+TNS   : -2.974
+
+Type  : Slow Model Hold 'clk_50M'
+Slack : -2.529
+TNS   : -2.529
+
+Type  : Slow Model Hold 's_clk4800'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'clk_50M'
+Slack : -1.806
+TNS   : -55.655
+
+Type  : Slow Model Recovery 's_clk76800'
+Slack : -1.389
+TNS   : -5.556
+
+Type  : Slow Model Recovery 's_clk4800'
+Slack : -0.360
+TNS   : -6.036
+
+Type  : Slow Model Recovery 'reset_n'
+Slack : 0.317
+TNS   : 0.000
+
+Type  : Slow Model Removal 'reset_n'
+Slack : -0.047
+TNS   : -0.047
+
+Type  : Slow Model Removal 's_clk4800'
+Slack : 0.635
+TNS   : 0.000
+
+Type  : Slow Model Removal 'clk_50M'
+Slack : 1.887
+TNS   : 0.000
+
+Type  : Slow Model Removal 's_clk76800'
+Slack : 2.159
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk_50M'
+Slack : -1.380
+TNS   : -40.380
+
+Type  : Slow Model Minimum Pulse Width 'reset_n'
+Slack : -1.380
+TNS   : -2.380
+
+Type  : Slow Model Minimum Pulse Width 's_clk4800'
+Slack : -0.500
+TNS   : -47.000
+
+Type  : Slow Model Minimum Pulse Width 's_clk76800'
+Slack : -0.500
+TNS   : -5.000
+
+Type  : Fast Model Setup 'clk_50M'
+Slack : -0.866
+TNS   : -12.150
+
+Type  : Fast Model Setup 's_clk4800'
+Slack : -0.124
+TNS   : -0.620
+
+Type  : Fast Model Setup 's_clk76800'
+Slack : 0.011
+TNS   : 0.000
+
+Type  : Fast Model Hold 's_clk76800'
+Slack : -1.757
+TNS   : -1.757
+
+Type  : Fast Model Hold 'clk_50M'
+Slack : -1.575
+TNS   : -1.575
+
+Type  : Fast Model Hold 's_clk4800'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'clk_50M'
+Slack : -0.496
+TNS   : -13.406
+
+Type  : Fast Model Recovery 's_clk76800'
+Slack : -0.337
+TNS   : -1.348
+
+Type  : Fast Model Recovery 's_clk4800'
+Slack : 0.224
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'reset_n'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Fast Model Removal 'reset_n'
+Slack : -0.029
+TNS   : -0.029
+
+Type  : Fast Model Removal 's_clk4800'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Fast Model Removal 'clk_50M'
+Slack : 1.077
+TNS   : 0.000
+
+Type  : Fast Model Removal 's_clk76800'
+Slack : 1.217
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk_50M'
+Slack : -1.380
+TNS   : -40.380
+
+Type  : Fast Model Minimum Pulse Width 'reset_n'
+Slack : -1.380
+TNS   : -2.380
+
+Type  : Fast Model Minimum Pulse Width 's_clk4800'
+Slack : -0.500
+TNS   : -47.000
+
+Type  : Fast Model Minimum Pulse Width 's_clk76800'
+Slack : -0.500
+TNS   : -5.000
+
+------------------------------------------------------------
