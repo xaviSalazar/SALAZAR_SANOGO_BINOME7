@@ -8,7 +8,7 @@ port (
 -----------------INTERFACE----------------------------
 ----------------------------------------------------
 clk_50M, chipselect, write_n, reset_n: in std_logic;
- address: in std_logic_vector (2 downto 0);
+address: in std_logic_vector (2 downto 0);
 writedata : in std_logic_vector (31 downto 0);
 readdata : out std_logic_vector (31 downto 0);
 -----------------------------------------------------
@@ -46,7 +46,7 @@ done_probe <= done;
 
 --0000000000000000000000000000000000000000000000000000000000000000
 --*************************************************
--- process generation horloge à 76800 hz à partir 50MHz
+-- process generation horloge ï¿½ 76800 hz ï¿½ partir 50MHz
 --*************************************************
 	gen_clk16 : PROCESS (clk_50M, raz_n)
 	BEGIN
@@ -68,7 +68,7 @@ done_probe <= done;
 
 --0000000000000000000000000000000000000000000000000000000000000000
 --**************************************************   
--- process generation horloge data de 4800 bauds à partir 76800hz
+-- process generation horloge data de 4800 bauds ï¿½ partir 76800hz
 --*************************************************
 gen_4800: PROCESS (s_clk76800, raz_n)
 	BEGIN
@@ -88,7 +88,7 @@ gen_4800: PROCESS (s_clk76800, raz_n)
 
 
 --**************************************************   
--- process generation horloge data de 1Hz à partir 50Mhz pour envoyer la trame toutes les 1s
+-- process generation horloge data de 1Hz ï¿½ partir 50Mhz pour envoyer la trame toutes les 1s
 --*************************************************
 clk_1: PROCESS (clk_50M, raz_n)
 	BEGIN
@@ -106,7 +106,7 @@ clk_1: PROCESS (clk_50M, raz_n)
 --*************************************************
 --0000000000000000000000000000000000000000000000000000000000000000
 
--- process remise à zero
+-- process remise ï¿½ zero
 --*************************************************
 config: PROCESS (reset_n)
 	BEGIN
@@ -126,7 +126,7 @@ config: PROCESS (reset_n)
 
 --0000000000000000000000000000000000000000000000000000000000000000
 --**************************************************
--- process  comptage des bits émis
+-- process  comptage des bits ï¿½mis
 --*************************************************
 comptage_bit: process (done, s_clk4800)
 
@@ -146,7 +146,7 @@ end process;
 
 --0000000000000000000000000000000000000000000000000000000000000000
 --******************************************************
--- machine à états gestion interface nios
+-- machine ï¿½ ï¿½tats gestion interface nios
 --*************************************************
 gestion_nios:	process (clk_50M, raz_n, s_clk1)
 	begin 
@@ -187,7 +187,7 @@ gestion_nios:	process (clk_50M, raz_n, s_clk1)
 
 --0000000000000000000000000000000000000000000000000000000000000000
 --******************************************************
--- machine à états gestion emission
+-- machine ï¿½ ï¿½tats gestion emission
 --*************************************************
 gestion_emission:	process (s_clk4800, done, synchro, centaine, dizaine, unite )
 	
@@ -290,7 +290,7 @@ end    ARCHITECTURE arch_nmea_tx;
 --
 ----0000000000000000000000000000000000000000000000000000000000000000
 ----*************************************************
----- création de la data à transmettre: data_tx
+---- crï¿½ation de la data ï¿½ transmettre: data_tx
 ----*************************************************
 ----data_tx <= '0'&data_s(7 downto 0)&'1'&'0'&d_h(7 downto 0)&'1'&'0'&d_m(7 downto 0)&'1'&'0'&d_l(7 downto 0)&'1';
 ----0000000000000000000000000000000000000000000000000000000000000000
@@ -300,7 +300,7 @@ end    ARCHITECTURE arch_nmea_tx;
 --
 ----0000000000000000000000000000000000000000000000000000000000000000
 ----*************************************************
----- process generation horloge à 76800 hz à partir 50MHz
+---- process generation horloge ï¿½ 76800 hz ï¿½ partir 50MHz
 ----*************************************************
 --	gen_clk16 : PROCESS (clk, raz_n)
 --	BEGIN
@@ -322,7 +322,7 @@ end    ARCHITECTURE arch_nmea_tx;
 --
 ----0000000000000000000000000000000000000000000000000000000000000000
 ----**************************************************   
----- process generation horloge data de 4800 bauds à partir 76800hz
+---- process generation horloge data de 4800 bauds ï¿½ partir 76800hz
 ----*************************************************
 --gen_4800: PROCESS (s_clk16, raz_n)
 --	BEGIN
@@ -340,7 +340,7 @@ end    ARCHITECTURE arch_nmea_tx;
 --
 ----0000000000000000000000000000000000000000000000000000000000000000
 ----**************************************************
----- process  comptage des bits émis
+---- process  comptage des bits ï¿½mis
 ----*************************************************
 --comptage_bit: process (done, s_count16(3))
 --
@@ -360,7 +360,7 @@ end    ARCHITECTURE arch_nmea_tx;
 --
 ----0000000000000000000000000000000000000000000000000000000000000000
 ----******************************************************
----- machine à états gestion interface nios
+---- machine ï¿½ ï¿½tats gestion interface nios
 ----*************************************************
 --gestion_nios:	process (clk, raz_n)
 --	begin 
@@ -397,7 +397,7 @@ end    ARCHITECTURE arch_nmea_tx;
 --
 ----0000000000000000000000000000000000000000000000000000000000000000
 ----******************************************************
----- machine à états gestion emission
+---- machine ï¿½ ï¿½tats gestion emission
 ----*************************************************
 --gestion_emission:	process (s_count16(3), done, d_s, d_h, d_m, d_l )
 --	
@@ -418,7 +418,7 @@ end    ARCHITECTURE arch_nmea_tx;
 ----0000000000000000000000000000000000000000000000000000000000000000
 ---- 				interface bus avalon
 ----******************************************************
----- écriture registres
+---- ï¿½criture registres
 ----*******************************************************
 --ecriture: process (clk, reset_n)
 --	begin
