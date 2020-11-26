@@ -1,5 +1,9 @@
 Assembler report for com_nmea_tx
+<<<<<<< HEAD
 Fri Nov 20 22:42:20 2020
+=======
+Fri Nov 20 16:46:19 2020
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -10,7 +14,7 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/BE/SALAZAR_SANOGO_BINOME7/Com_NMEA_TX_Q15/output_files/com_nmea_tx.sof
+  5. Assembler Device Options: C:/Users/Xavi/Documents/FPGA2020/GITDOCS/Com_NMEA_TX_Q15/output_files/com_nmea_tx.sof
   6. Assembler Messages
 
 
@@ -38,7 +42,11 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
+<<<<<<< HEAD
 ; Assembler Status      ; Successful - Fri Nov 20 22:42:20 2020 ;
+=======
+; Assembler Status      ; Successful - Fri Nov 20 16:46:19 2020 ;
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 ; Revision Name         ; com_nmea_tx                           ;
 ; Top-level Entity Name ; nmea_tx                               ;
 ; Family                ; Cyclone IV E                          ;
@@ -53,15 +61,16 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+---------------------------------------------------------------------------+
-; Assembler Generated Files                                                 ;
-+---------------------------------------------------------------------------+
-; File Name                                                                 ;
-+---------------------------------------------------------------------------+
-; E:/BE/SALAZAR_SANOGO_BINOME7/Com_NMEA_TX_Q15/output_files/com_nmea_tx.sof ;
-+---------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                             ;
++---------------------------------------------------------------------------------------+
+; File Name                                                                             ;
++---------------------------------------------------------------------------------------+
+; C:/Users/Xavi/Documents/FPGA2020/GITDOCS/Com_NMEA_TX_Q15/output_files/com_nmea_tx.sof ;
++---------------------------------------------------------------------------------------+
 
 
+<<<<<<< HEAD
 +-----------------------------------------------------------------------------------------------------+
 ; Assembler Device Options: E:/BE/SALAZAR_SANOGO_BINOME7/Com_NMEA_TX_Q15/output_files/com_nmea_tx.sof ;
 +----------------+------------------------------------------------------------------------------------+
@@ -71,6 +80,17 @@ agreement for further details.
 ; JTAG usercode  ; 0x00136000                                                                         ;
 ; Checksum       ; 0x00136000                                                                         ;
 +----------------+------------------------------------------------------------------------------------+
+=======
++-----------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Xavi/Documents/FPGA2020/GITDOCS/Com_NMEA_TX_Q15/output_files/com_nmea_tx.sof ;
++----------------+------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                        ;
++----------------+------------------------------------------------------------------------------------------------+
+; Device         ; EP4CE22F17C6                                                                                   ;
+; JTAG usercode  ; 0x001439CD                                                                                     ;
+; Checksum       ; 0x001439CD                                                                                     ;
++----------------+------------------------------------------------------------------------------------------------+
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 
 
 +--------------------+
@@ -79,14 +99,25 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+<<<<<<< HEAD
     Info: Processing started: Fri Nov 20 22:42:15 2020
+=======
+    Info: Processing started: Fri Nov 20 16:46:17 2020
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off com_nmea_tx -c com_nmea_tx
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
+<<<<<<< HEAD
     Info: Peak virtual memory: 599 megabytes
     Info: Processing ended: Fri Nov 20 22:42:20 2020
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:03
+=======
+    Info: Peak virtual memory: 4745 megabytes
+    Info: Processing ended: Fri Nov 20 16:46:19 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 
 

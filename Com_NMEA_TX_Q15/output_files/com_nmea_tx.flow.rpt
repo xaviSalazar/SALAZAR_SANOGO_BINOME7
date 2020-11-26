@@ -1,5 +1,9 @@
 Flow report for com_nmea_tx
+<<<<<<< HEAD
 Fri Nov 20 22:42:41 2020
+=======
+Fri Nov 20 16:46:28 2020
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -41,17 +45,28 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
+<<<<<<< HEAD
 ; Flow Status                        ; Successful - Fri Nov 20 22:42:41 2020      ;
+=======
+; Flow Status                        ; Successful - Fri Nov 20 16:46:28 2020      ;
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; com_nmea_tx                                ;
 ; Top-level Entity Name              ; nmea_tx                                    ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE22F17C6                               ;
 ; Timing Models                      ; Final                                      ;
+<<<<<<< HEAD
 ; Total logic elements               ; 3 / 22,320 ( < 1 % )                       ;
 ;     Total combinational functions  ; 3 / 22,320 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 3 / 22,320 ( < 1 % )                       ;
 ; Total registers                    ; 3                                          ;
+=======
+; Total logic elements               ; 126 / 22,320 ( < 1 % )                     ;
+;     Total combinational functions  ; 109 / 22,320 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 91 / 22,320 ( < 1 % )                      ;
+; Total registers                    ; 91                                         ;
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 ; Total pins                         ; 74 / 154 ( 48 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                        ;
@@ -65,7 +80,11 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
+<<<<<<< HEAD
 ; Start date & time ; 11/20/2020 22:41:11 ;
+=======
+; Start date & time ; 11/20/2020 16:45:47 ;
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 ; Main task         ; Compilation         ;
 ; Revision Name     ; com_nmea_tx         ;
 +-------------------+---------------------+
@@ -76,7 +95,11 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
+<<<<<<< HEAD
 ; COMPILER_SIGNATURE_ID                ; 211349272451406.160590847105700       ; --            ; --          ; --             ;
+=======
+; COMPILER_SIGNATURE_ID                ; 190135463115270.160588714712124       ; --            ; --          ; --             ;
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; nmea_tx        ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; nmea_tx                               ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation ;
@@ -104,12 +127,21 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+<<<<<<< HEAD
 ; Analysis & Synthesis      ; 00:00:35     ; 1.0                     ; 702 MB              ; 00:01:03                           ;
 ; Fitter                    ; 00:00:20     ; 1.0                     ; 928 MB              ; 00:00:18                           ;
 ; Assembler                 ; 00:00:05     ; 1.0                     ; 599 MB              ; 00:00:03                           ;
 ; TimeQuest Timing Analyzer ; 00:00:10     ; 1.0                     ; 666 MB              ; 00:00:05                           ;
 ; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 564 MB              ; 00:00:02                           ;
 ; Total                     ; 00:01:13     ; --                      ; --                  ; 00:01:31                           ;
+=======
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4849 MB             ; 00:00:35                           ;
+; Fitter                    ; 00:00:11     ; 1.0                     ; 5150 MB             ; 00:00:11                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4745 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4836 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4708 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:32     ; --                      ; --                  ; 00:00:52                           ;
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,11 +150,11 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; Lamouss-PC       ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; Lamouss-PC       ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; Lamouss-PC       ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; Lamouss-PC       ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; Lamouss-PC       ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Xavi             ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Xavi             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Xavi             ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Xavi             ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Xavi             ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

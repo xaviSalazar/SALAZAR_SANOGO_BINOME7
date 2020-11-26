@@ -1,3 +1,5 @@
+
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_unsigned.ALL;
@@ -21,7 +23,11 @@ clk76800    : out std_logic
 END nmea_tx;
 
 ARCHITECTURE arch_nmea_tx OF nmea_tx IS
+<<<<<<< HEAD
 signal s_count76800 : integer range 0 to 325;
+=======
+signal s_count76800 : integer range 0 to 651;
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 signal s_clk76800   : std_logic;
 signal s_count4800 : integer range 0 to 8;
 signal s_clk4800   : std_logic;
@@ -32,10 +38,17 @@ signal start_stop   : std_logic := '1';
 signal  raz_n  : std_logic;
 signal count_bit : std_logic_vector (5 downto 0);
  -----------------------------------------------------------
+<<<<<<< HEAD
 signal synchro   : std_logic_vector(7 downto 0) := X"AA";
 signal centaine  : std_logic_vector(7 downto 0) := X"0A";
 signal dizaine   : std_logic_vector(7 downto 0) := X"0B";
 signal unite     : std_logic_vector(7 downto 0) := X"0C";
+=======
+signal synchro   : std_logic_vector(7 downto 0) := X"64";
+signal centaine  : std_logic_vector(7 downto 0) := X"65";
+signal dizaine   : std_logic_vector(7 downto 0) := X"66";
+signal unite     : std_logic_vector(7 downto 0) := X"67";
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
  -----------------------------------------------------------
  signal trame : std_logic_vector (40 downto 0);
  signal etat_nios: integer range 1 to 3;
@@ -53,7 +66,11 @@ done_probe <= done;
        IF raz_n = '0' THEN
           s_count76800 <= 0;
        ELSIF rising_edge(clk_50M) THEN
+<<<<<<< HEAD
          if s_count76800 = 650 then --651 then
+=======
+         if s_count76800 = 650 then
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 			s_count76800 <= 0;
 			s_clk76800 <= '1';
 		else
@@ -78,13 +95,58 @@ gen_4800: PROCESS (s_clk76800, raz_n)
 		ELSIF rising_edge(s_clk76800) THEN
 		if s_count4800 = 7 then
 			s_count4800 <= 0;
+<<<<<<< HEAD
 			s_clk4800 <= not(s_clk4800);
 		else
+=======
+			s_clk4800 <= not s_clk4800 ;
+		else
+		  -- s_clk4800 <= '0';
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 			s_count4800 <= s_count4800+1;
 		end if;
 		END IF;
     END PROCESS;
 --    clk_bit <= s_count16(3);-- pour visu du clock bit
+--*************************************************
+<<<<<<< HEAD
+
+
+--**************************************************   
+-- process generation horloge data de 1Hz � partir 50Mhz pour envoyer la trame toutes les 1s
+--*************************************************
+clk_1: PROCESS (clk_50M, raz_n)
+	BEGIN
+       IF raz_n = '0' THEN
+          s_count1 <= 0;
+       ELSIF rising_edge(clk_50M) THEN
+         if s_count1 = 50000000 then
+			s_count1 <= 0;
+			s_clk1 <= not(s_clk1);
+		else
+			s_count1 <= s_count1+1;
+		end if;
+       END IF;
+    END PROCESS;
+--*************************************************
+--0000000000000000000000000000000000000000000000000000000000000000
+=======
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
+
+-- process remise � zero
+--*************************************************
+config: PROCESS (reset_n)
+	BEGIN
+       IF reset_n = '1' THEN
+         raz_n <= '1';
+			--start_stop <= '1';
+		 else
+		    if reset_n = '0' then
+			      raz_n <= '0';
+			      --start_stop <= '0';
+			  end if;
+       END IF;
+    END PROCESS;
 --*************************************************
 
 
@@ -123,8 +185,6 @@ config: PROCESS (reset_n)
     END PROCESS;
 --*************************************************
 
-
-
 --0000000000000000000000000000000000000000000000000000000000000000
 --**************************************************
 -- process  comptage des bits �mis
@@ -143,8 +203,11 @@ end process;
 --******************************************************
 --0000000000000000000000000000000000000000000000000000000000000000
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 --0000000000000000000000000000000000000000000000000000000000000000
 --******************************************************
 -- machine � �tats gestion interface nios
@@ -202,7 +265,11 @@ gestion_emission:	process (s_clk4800, done, synchro, centaine, dizaine, unite )
     txd <= trame(0);
 	
 
+<<<<<<< HEAD
 --******************************************************
 
+=======
+--*****************************************************
+>>>>>>> 795e9d819e28586e6b325e399cd610c499c0f218
 
 end    ARCHITECTURE arch_nmea_tx;
