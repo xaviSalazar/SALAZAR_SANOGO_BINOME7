@@ -1,0 +1,137 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_50M'
+Slack : -2.352
+TNS   : -56.933
+
+Type  : Slow 1200mV 85C Model Setup 'nmea_tx:tx|s_clk4800'
+Slack : -1.085
+TNS   : -7.429
+
+Type  : Slow 1200mV 85C Model Setup 'nmea_tx:tx|s_clk76800'
+Slack : -0.762
+TNS   : -0.775
+
+Type  : Slow 1200mV 85C Model Hold 'nmea_tx:tx|s_clk76800'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_50M'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'nmea_tx:tx|s_clk4800'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'nmea_tx:tx|s_clk4800'
+Slack : -0.655
+TNS   : -22.970
+
+Type  : Slow 1200mV 85C Model Removal 'nmea_tx:tx|s_clk4800'
+Slack : 0.799
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_50M'
+Slack : -3.000
+TNS   : -43.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'nmea_tx:tx|s_clk4800'
+Slack : -1.000
+TNS   : -47.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'nmea_tx:tx|s_clk76800'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_50M'
+Slack : -2.052
+TNS   : -46.920
+
+Type  : Slow 1200mV 0C Model Setup 'nmea_tx:tx|s_clk4800'
+Slack : -0.883
+TNS   : -5.676
+
+Type  : Slow 1200mV 0C Model Setup 'nmea_tx:tx|s_clk76800'
+Slack : -0.591
+TNS   : -0.591
+
+Type  : Slow 1200mV 0C Model Hold 'clk_50M'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'nmea_tx:tx|s_clk76800'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'nmea_tx:tx|s_clk4800'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'nmea_tx:tx|s_clk4800'
+Slack : -0.506
+TNS   : -16.312
+
+Type  : Slow 1200mV 0C Model Removal 'nmea_tx:tx|s_clk4800'
+Slack : 0.738
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_50M'
+Slack : -3.000
+TNS   : -43.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'nmea_tx:tx|s_clk4800'
+Slack : -1.000
+TNS   : -47.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'nmea_tx:tx|s_clk76800'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_50M'
+Slack : -0.948
+TNS   : -16.154
+
+Type  : Fast 1200mV 0C Model Setup 'nmea_tx:tx|s_clk76800'
+Slack : -0.214
+TNS   : -0.214
+
+Type  : Fast 1200mV 0C Model Setup 'nmea_tx:tx|s_clk4800'
+Slack : -0.151
+TNS   : -0.755
+
+Type  : Fast 1200mV 0C Model Hold 'nmea_tx:tx|s_clk76800'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_50M'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'nmea_tx:tx|s_clk4800'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'nmea_tx:tx|s_clk4800'
+Slack : 0.069
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'nmea_tx:tx|s_clk4800'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_50M'
+Slack : -3.000
+TNS   : -45.255
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'nmea_tx:tx|s_clk4800'
+Slack : -1.000
+TNS   : -47.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'nmea_tx:tx|s_clk76800'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

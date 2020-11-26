@@ -56,11 +56,11 @@ void loop() { // run over and over
   }
  // Serial.print(trame);
   trame = "";*/
-  if (Serial.available()) {
-    Serial.println(Serial.read());
+  if (mySerial.available()) {
+    Serial.println(mySerial.read());
     //Serial.println();
   }
- /* if (Serial.available()) {
+/*  if (Serial.available()) {
     mySerial.println(Serial.read());
   }*/
 }
