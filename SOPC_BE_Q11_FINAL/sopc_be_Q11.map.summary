@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Dec 15 15:14:49 2020
+Quartus II 32-bit Version : 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition
+Revision Name : sopc_be_Q11
+Top-level Entity Name : sopc_be_Q11
+Family : Cyclone IV E
+Total logic elements : 3,315
+    Total combinational functions : 3,044
+    Dedicated logic registers : 1,179
+Total registers : 1179
+Total pins : 52
+Total virtual pins : 0
+Total memory bits : 175,104
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

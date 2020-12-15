@@ -1,5 +1,5 @@
 Assembler report for Com_NMEA
-Thu Nov 26 12:15:07 2020
+Sat Dec 12 18:53:33 2020
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -38,9 +38,9 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Nov 26 12:15:07 2020 ;
+; Assembler Status      ; Successful - Sat Dec 12 18:53:33 2020 ;
 ; Revision Name         ; Com_NMEA                              ;
-; Top-level Entity Name ; Com_NMEA                              ;
+; Top-level Entity Name ; nmea_rx                               ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE22F17C6                          ;
 +-----------------------+---------------------------------------+
@@ -68,8 +68,8 @@ agreement for further details.
 ; Option         ; Setting                                                                      ;
 +----------------+------------------------------------------------------------------------------+
 ; Device         ; EP4CE22F17C6                                                                 ;
-; JTAG usercode  ; 0x00142340                                                                   ;
-; Checksum       ; 0x00142340                                                                   ;
+; JTAG usercode  ; 0x00152EC1                                                                   ;
+; Checksum       ; 0x00152EC1                                                                   ;
 +----------------+------------------------------------------------------------------------------+
 
 
@@ -79,14 +79,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu Nov 26 12:14:59 2020
+    Info: Processing started: Sat Dec 12 18:53:30 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Com_NMEA -c Com_NMEA
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 600 megabytes
-    Info: Processing ended: Thu Nov 26 12:15:07 2020
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 602 megabytes
+    Info: Processing ended: Sat Dec 12 18:53:33 2020
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 

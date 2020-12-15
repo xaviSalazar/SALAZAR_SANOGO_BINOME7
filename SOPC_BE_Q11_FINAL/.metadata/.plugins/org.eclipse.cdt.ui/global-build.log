@@ -1,0 +1,27 @@
+14:58:35 **** Incremental Build of configuration Nios II for project projetau12132020 ****
+make all 
+Info: Building ../projetau12132020_bsp/
+C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../projetau12132020_bsp/
+[BSP build complete]
+[projetau12132020 build complete]
+14:58:46 **** Build of configuration Nios II for project projetau12132020 ****
+make all 
+Info: Building ../projetau12132020_bsp/
+C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../projetau12132020_bsp/
+[BSP build complete]
+[projetau12132020 build complete]
+14:58:50 **** Incremental Build of configuration Nios II for project projetau12132020 ****
+make all 
+Info: Building ../projetau12132020_bsp/
+C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../projetau12132020_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../projetau12132020_bsp//HAL/inc -I../projetau12132020_bsp/ -I../projetau12132020_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world_small.o hello_world_small.c
+Info: Linking projetau12132020.elf
+nios2-elf-g++  -T'../projetau12132020_bsp//linker.x' -msys-crt0='../projetau12132020_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../projetau12132020_bsp/  -msmallc  -Wl,-Map=projetau12132020.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o projetau12132020.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert projetau12132020.elf --thread_model hal --cpu_name cpu_0 --simulation_enabled false --id 0 --sidp 0x11078 --timestamp 1608039906 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name mon_sopc --quartus_project_dir "C:/Users/Xavi/Documents/FPGA2020/SOPC_BE_Q11MODIF" --jdi C:/Users/Xavi/Documents/FPGA2020/SOPC_BE_Q11MODIF/software/projetau12132020_bsp/../../sopc_be_Q11.jdi --sopcinfo C:/Users/Xavi/Documents/FPGA2020/SOPC_BE_Q11MODIF/software/projetau12132020_bsp/../../mon_sopc.sopcinfo
+Info: (projetau12132020.elf) 3824 Bytes program size (code + initialized data).
+Info:                        16 KBytes free for stack + heap.
+Info: Creating projetau12132020.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source projetau12132020.elf >projetau12132020.objdump
+[projetau12132020 build complete]

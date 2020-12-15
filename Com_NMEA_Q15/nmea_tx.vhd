@@ -13,13 +13,14 @@ writedata : in std_logic_vector (31 downto 0);
 readdata : out std_logic_vector (31 downto 0);
 -----------------------------------------------------
 -----------------TRANSMISSION-------------------------------
-done_probe, txd : out std_logic
------------------------------------------------------------
+done_probe, txd : out std_logic;
+-----------------------Donnees------------------------------------
+centaine, dizaine, unite   : in std_logic_vector(7 downto 0)
 );
 END nmea_tx;
 
 ARCHITECTURE arch_nmea_tx OF nmea_tx IS
-signal s_count76800 : integer range 0 to 650;
+signal s_count76800 : integer range 0 to 651;
 signal s_clk76800   : std_logic;
 signal s_count4800 : integer range 0 to 7;
 signal s_clk4800   : std_logic;
@@ -27,16 +28,19 @@ signal s_count1 : integer range 0 to 50000000;
 signal s_clk1   : std_logic;
 signal done, fin_tx : std_logic;
 signal start_stop   : std_logic := '1';
-signal  raz_n  : std_logic; --:='1';
+signal  raz_n  : std_logic;
 signal count_bit : std_logic_vector (5 downto 0);
- -----------------------------------------------------------
-signal synchro   : std_logic_vector(7 downto 0) := X"AA";
-signal centaine  : std_logic_vector(7 downto 0) := X"0A";
-signal dizaine   : std_logic_vector(7 downto 0) := X"0B";
-signal unite     : std_logic_vector(7 downto 0) := X"0C";
- -----------------------------------------------------------
- signal trame : std_logic_vector (40 downto 0);
- signal etat_nios: integer range 1 to 3;
+
+signal synchro   : std_logic_vector(7 downto 0) := X"FF";
+--signal centaine  : std_logic_vector(7 downto 0) := X"AB";
+--signal dizaine   : std_logic_vector(7 downto 0) := X"CD";
+--signal unite     : std_logic_vector(7 downto 0) := X"EF";
+
+signal config : std_logic_vector (2 downto 0); 
+                                                
+-----------------------------------------------------------
+signal trame : std_logic_vector (40 downto 0);
+signal etat_nios: integer range 1 to 3;
  
 BEGIN
 
@@ -105,27 +109,11 @@ clk_1: PROCESS (clk_50M, raz_n)
 --*************************************************
 --0000000000000000000000000000000000000000000000000000000000000000
 
--- process remise à zero
---*************************************************
-config: PROCESS (reset_n)
-	BEGIN
-       IF reset_n = '1' THEN
-         raz_n <= '1';
-			--start_stop <= '1';
-		 else
-		    if reset_n = '0' then
-			      raz_n <= '0';
-			      --start_stop <= '0';
-			  end if;
-       END IF;
-    END PROCESS;
---*************************************************
-
 
 
 --0000000000000000000000000000000000000000000000000000000000000000
 --**************************************************
--- process  comptage des bits Ã¯Â¿Â½mis
+-- process  comptage des bits émis
 --*************************************************
 comptage_bit: process (done, s_clk4800)
 
@@ -161,7 +149,7 @@ gestion_nios:	process (clk_50M, raz_n, s_clk1)
 			end if;
 		when 2 =>	
 			if fin_tx ='1' then 
-			start_stop <= '0';
+			start_stop <= '0'; --valeur lu sur bus avalon chaque front montant clk_50M
 			etat_nios <=3	;
 			done <= '1';
 			end if;
@@ -199,8 +187,60 @@ gestion_emission:	process (s_clk4800, done, synchro, centaine, dizaine, unite )
     end process gestion_emission; 
     txd <= trame(0);
 	
-
---******************************************************
+----0000000000000000000000000000000000000000000000000000000000000000
+---- 				interface bus avalon
+----******************************************************
+---- écriture registres
+----*******************************************************
+--ecriture: process (clk_50M, reset_n)
+--	begin
+--	if reset_n = '0' then
+--	config <= (others => '0');
+--	elsif rising_edge(clk_50M) then
+--		if chipselect ='1' and write_n = '0' then
+--			case address is
+--			when "000" =>
+--			config (2 downto 0)<= (writedata (2 downto 0));
+--			when "001" =>
+--			synchro (7 downto 0)<= (writedata (7 downto 0));
+--			when "010" =>
+--			centaine (7 downto 0)<= (writedata (7 downto 0));
+--			when "011" =>
+--			dizaine (7 downto 0)<= (writedata (7 downto 0));
+--			when "100" =>
+--			unite (7 downto 0)<= (writedata (7 downto 0));
+--			when others => 
+--			config <= (others => '0');
+--			end case;
+--		end if;
+--	end if;
+--end process ecriture;
+----****************************************************************
+--raz_n <= config (0);
+----start_stop <= config (1);
+----*****************************************************************
+----	lecture des registres
+----*****************************************************************
+--lecture: process (address, done, start_stop, raz_n)
+--	begin
+--		case address is
+--			when "000" =>
+--			readdata(2 downto 0) <= done&start_stop&raz_n;
+--			when "001" =>
+--			readdata(7 downto 0) <= synchro ;
+--			when "010" =>
+--			readdata(7 downto 0) <= centaine ;
+--			when "011" =>
+--			readdata(7 downto 0) <= dizaine ;
+--			when "100" =>
+--			readdata(7 downto 0) <= unite ;
+--			when others => 
+--			readdata <= (others => '0');
+--			end case;
+--end process lecture;
+----**********************************************************************
+----00000000000000000000000000000000000000000000000000000000000000000000000
+----******************************************************
 
 
 end    ARCHITECTURE arch_nmea_tx;

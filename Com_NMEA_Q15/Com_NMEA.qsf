@@ -39,10 +39,10 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY Com_NMEA
+set_global_assignment -name TOP_LEVEL_ENTITY nmea_rx
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:51:57  NOVEMBER 24, 2020"
-set_global_assignment -name LAST_QUARTUS_VERSION 15.0.0
+set_global_assignment -name LAST_QUARTUS_VERSION "11.1 SP2"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -56,9 +56,22 @@ set_location_assignment PIN_R8 -to clk_50M
 set_location_assignment PIN_D3 -to txd
 set_global_assignment -name VHDL_FILE nmea_rx.vhd
 set_global_assignment -name VHDL_FILE Com_NMEA.vhd
+set_location_assignment PIN_A3 -to rxd
+set_location_assignment PIN_B12 -to txd_echo
+set_location_assignment PIN_A15 -to unite_ok
+set_location_assignment PIN_A13 -to dizaine_ok
+set_location_assignment PIN_B13 -to centaine_ok
+set_location_assignment PIN_J13 -to BCD7SEGMENT[0]
+set_location_assignment PIN_J16 -to BCD7SEGMENT[1]
+set_location_assignment PIN_M10 -to BCD7SEGMENT[2]
+set_location_assignment PIN_L14 -to BCD7SEGMENT[3]
+set_location_assignment PIN_N15 -to BCD7SEGMENT[4]
+set_location_assignment PIN_R14 -to BCD7SEGMENT[5]
+set_location_assignment PIN_P15 -to BCD7SEGMENT[6]
+set_location_assignment PIN_J14 -to multiplex[2]
+set_location_assignment PIN_K15 -to multiplex[1]
+set_location_assignment PIN_L13 -to multiplex[0]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_A3 -to rxd
-set_location_assignment PIN_B12 -to rxd_out
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

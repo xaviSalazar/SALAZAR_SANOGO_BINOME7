@@ -29,7 +29,7 @@
 
 String trame;
 char c;
-
+byte data;
 SoftwareSerial mySerial(11, 10); // RX, TX
 
 void setup() {
@@ -48,6 +48,7 @@ void setup() {
 }
 
 void loop() { // run over and over
+  data=0;
 /* while(mySerial.available()){
   //delay(3);
   c = mySerial.read();
@@ -56,11 +57,13 @@ void loop() { // run over and over
   }
  // Serial.print(trame);
   trame = "";*/
-  if (mySerial.available()) {
+/*  if (mySerial.available()) {
     Serial.println(mySerial.read(), HEX);
     //Serial.println();
-  }
-/*  if (Serial.available()) {
-    mySerial.println(Serial.read());
   }*/
+
+    //mySerial.println();
+//    mySerial.print(6);
+    mySerial.println(data, HEX);
+
 }

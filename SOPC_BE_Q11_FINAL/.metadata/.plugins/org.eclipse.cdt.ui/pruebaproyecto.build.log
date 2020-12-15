@@ -1,0 +1,18 @@
+12:35:51 **** Incremental Build of configuration Nios II for project pruebaproyecto ****
+make all 
+Info: Building ../pruebaproyecto_bsp/
+C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../pruebaproyecto_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../pruebaproyecto_bsp//HAL/inc -I../pruebaproyecto_bsp/ -I../pruebaproyecto_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world_small.o hello_world_small.c
+Info: Linking pruebaproyecto.elf
+nios2-elf-g++  -T'../pruebaproyecto_bsp//linker.x' -msys-crt0='../pruebaproyecto_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../pruebaproyecto_bsp/  -msmallc  -Wl,-Map=pruebaproyecto.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o pruebaproyecto.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert pruebaproyecto.elf --thread_model hal --cpu_name cpu_0 --simulation_enabled false --id 0 --sidp 0x11038 --timestamp 1606474179 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name mon_sopc --quartus_project_dir "C:/Users/Xavi/Documents/FPGA2020/GITDOCS/SOPC_BE_Q11MODIF" --jdi C:/Users/Xavi/Documents/FPGA2020/GITDOCS/SOPC_BE_Q11MODIF/software/pruebaproyecto_bsp/../../sopc_be_Q11.jdi --sopcinfo C:/Users/Xavi/Documents/FPGA2020/GITDOCS/SOPC_BE_Q11MODIF/software/pruebaproyecto_bsp/../../mon_sopc.sopcinfo
+Info: (pruebaproyecto.elf) 692 Bytes program size (code + initialized data).
+Info:                      19 KBytes free for stack + heap.
+Info: Creating pruebaproyecto.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source pruebaproyecto.elf >pruebaproyecto.objdump
+[pruebaproyecto build complete]
+
+12:35:57 Build Finished (took 6s.120ms)
+

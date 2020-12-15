@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Com_NMEA
-Thu Nov 26 12:14:26 2020
+Sat Dec 12 18:53:08 2020
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -17,11 +17,9 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   9. General Register Statistics
  10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "nmea_rx:rx"
- 13. Port Connectivity Checks: "nmea_tx:tx"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -48,16 +46,16 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 26 12:14:26 2020      ;
+; Analysis & Synthesis Status        ; Successful - Sat Dec 12 18:53:08 2020      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; Com_NMEA                                   ;
-; Top-level Entity Name              ; Com_NMEA                                   ;
+; Top-level Entity Name              ; nmea_rx                                    ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 123                                        ;
-;     Total combinational functions  ; 106                                        ;
+; Total logic elements               ; 231                                        ;
+;     Total combinational functions  ; 198                                        ;
 ;     Dedicated logic registers      ; 91                                         ;
 ; Total registers                    ; 91                                         ;
-; Total pins                         ; 5                                          ;
+; Total pins                         ; 20                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -71,7 +69,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                                      ; Com_NMEA           ; Com_NMEA           ;
+; Top-level entity name                                                      ; nmea_rx            ; Com_NMEA           ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -163,57 +161,54 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
-; nmea_tx.vhd                      ; yes             ; User VHDL File  ; E:/BE/SALAZAR_SANOGO_BINOME7/Com_NMEA_Q15/nmea_tx.vhd  ;         ;
-; nmea_rx.vhd                      ; yes             ; User VHDL File  ; E:/BE/SALAZAR_SANOGO_BINOME7/Com_NMEA_Q15/nmea_rx.vhd  ;         ;
-; Com_NMEA.vhd                     ; yes             ; User VHDL File  ; E:/BE/SALAZAR_SANOGO_BINOME7/Com_NMEA_Q15/Com_NMEA.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                          ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
+; nmea_rx.vhd                      ; yes             ; User VHDL File  ; E:/BE/SALAZAR_SANOGO_BINOME7/Com_NMEA_Q15/nmea_rx.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 123             ;
-;                                             ;                 ;
-; Total combinational functions               ; 106             ;
-; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 18              ;
-;     -- 3 input functions                    ; 4               ;
-;     -- <=2 input functions                  ; 84              ;
-;                                             ;                 ;
-; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 68              ;
-;     -- arithmetic mode                      ; 38              ;
-;                                             ;                 ;
-; Total registers                             ; 91              ;
-;     -- Dedicated logic registers            ; 91              ;
-;     -- I/O registers                        ; 0               ;
-;                                             ;                 ;
-; I/O pins                                    ; 5               ;
-;                                             ;                 ;
-; Embedded Multiplier 9-bit elements          ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; nmea_tx:tx|done ;
-; Maximum fan-out                             ; 51              ;
-; Total fan-out                               ; 465             ;
-; Average fan-out                             ; 2.25            ;
-+---------------------------------------------+-----------------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 231           ;
+;                                             ;               ;
+; Total combinational functions               ; 198           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 101           ;
+;     -- 3 input functions                    ; 29            ;
+;     -- <=2 input functions                  ; 68            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 164           ;
+;     -- arithmetic mode                      ; 34            ;
+;                                             ;               ;
+; Total registers                             ; 91            ;
+;     -- Dedicated logic registers            ; 91            ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 20            ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; clk_50M~input ;
+; Maximum fan-out                             ; 40            ;
+; Total fan-out                               ; 866           ;
+; Average fan-out                             ; 2.63          ;
++---------------------------------------------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                          ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
-; |Com_NMEA                  ; 106 (0)           ; 91 (0)       ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |Com_NMEA            ; work         ;
-;    |nmea_tx:tx|            ; 106 (106)         ; 91 (91)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Com_NMEA|nmea_tx:tx ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |nmea_rx                   ; 198 (198)         ; 91 (91)      ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |nmea_rx            ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -222,10 +217,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; nmea_tx:tx|trame[40]                  ; Stuck at VCC due to stuck port data_in ;
-; nmea_tx:tx|etat_nios[0]               ; Merged with nmea_tx:tx|done            ;
-; nmea_tx:tx|raz_n                      ; Stuck at GND due to stuck port clock   ;
-; Total Number of Removed Registers = 3 ;                                        ;
+; etat[2]                               ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -237,37 +230,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 91    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 47    ;
+; Number of registers using Asynchronous Clear ; 3     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Clock Enable       ; 27    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; nmea_tx:tx|trame[0]                     ; 1       ;
-; nmea_tx:tx|done                         ; 51      ;
-; nmea_tx:tx|start_stop                   ; 3       ;
-; nmea_tx:tx|trame[3]                     ; 1       ;
-; nmea_tx:tx|trame[5]                     ; 1       ;
-; nmea_tx:tx|trame[7]                     ; 1       ;
-; nmea_tx:tx|trame[9]                     ; 1       ;
-; nmea_tx:tx|trame[10]                    ; 1       ;
-; nmea_tx:tx|trame[13]                    ; 1       ;
-; nmea_tx:tx|trame[15]                    ; 1       ;
-; nmea_tx:tx|trame[20]                    ; 1       ;
-; nmea_tx:tx|trame[22]                    ; 1       ;
-; nmea_tx:tx|trame[23]                    ; 1       ;
-; nmea_tx:tx|trame[25]                    ; 1       ;
-; nmea_tx:tx|trame[30]                    ; 1       ;
-; nmea_tx:tx|trame[34]                    ; 1       ;
-; nmea_tx:tx|trame[35]                    ; 1       ;
-; Total number of inverted registers = 17 ;         ;
-+-----------------------------------------+---------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; etat[0]                                ; 3       ;
+; centaine[0]                            ; 11      ;
+; dizaine[1]                             ; 13      ;
+; ack                                    ; 4       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -275,29 +255,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Com_NMEA|nmea_tx:tx|done  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |nmea_rx|s_multiplex[1]    ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |nmea_rx|etat[1]           ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |nmea_rx|etat_chaine[3]    ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |nmea_rx|BCD7SEGMENT       ;
+; 19:1               ; 3 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |nmea_rx|BCD7SEGMENT       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "nmea_rx:rx"                                                                               ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; readdata   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; val_data   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; val_chaine ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "nmea_tx:tx"                                                                               ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; readdata   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; done_probe ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -305,23 +268,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 5                           ;
+; boundary_port         ; 20                          ;
 ; cycloneiii_ff         ; 91                          ;
-;     CLR               ; 42                          ;
-;     ENA CLR           ; 5                           ;
-;     plain             ; 44                          ;
-; cycloneiii_lcell_comb ; 107                         ;
-;     arith             ; 38                          ;
-;         2 data inputs ; 37                          ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 69                          ;
-;         1 data inputs ; 28                          ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 18                          ;
+;     CLR               ; 3                           ;
+;     ENA               ; 27                          ;
+;     plain             ; 61                          ;
+; cycloneiii_lcell_comb ; 199                         ;
+;     arith             ; 34                          ;
+;         2 data inputs ; 34                          ;
+;     normal            ; 165                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 29                          ;
+;         4 data inputs ; 101                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.50                        ;
-; Average LUT depth     ; 2.43                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -330,7 +293,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -340,7 +303,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu Nov 26 12:13:57 2020
+    Info: Processing started: Sat Dec 12 18:52:43 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Com_NMEA -c Com_NMEA
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file nmea_tx.vhd
@@ -352,44 +315,39 @@ Info (12021): Found 2 design units, including 1 entities, in source file nmea_rx
 Info (12021): Found 2 design units, including 1 entities, in source file com_nmea.vhd
     Info (12022): Found design unit 1: Com_NMEA-arch_Com_NMEA
     Info (12023): Found entity 1: Com_NMEA
-Info (12127): Elaborating entity "Com_NMEA" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at Com_NMEA.vhd(54): used implicit default value for signal "chipselect" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Com_NMEA.vhd(54): used implicit default value for signal "write_n" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Com_NMEA.vhd(55): used implicit default value for signal "address" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at Com_NMEA.vhd(56): used implicit default value for signal "writedata" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at Com_NMEA.vhd(57): object "readdata" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Com_NMEA.vhd(58): object "done_probe" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Com_NMEA.vhd(60): object "val_data" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at Com_NMEA.vhd(60): object "val_chaine" assigned a value but never read
-Info (12129): Elaborating entity "nmea_tx" using architecture "A:arch_nmea_tx" for hierarchy "nmea_tx:tx"
-Warning (10541): VHDL Signal Declaration warning at nmea_tx.vhd(13): used implicit default value for signal "readdata" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10540): VHDL Signal Declaration warning at nmea_tx.vhd(33): used explicit default value for signal "synchro" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at nmea_tx.vhd(34): used explicit default value for signal "centaine" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at nmea_tx.vhd(35): used explicit default value for signal "dizaine" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at nmea_tx.vhd(36): used explicit default value for signal "unite" because signal was never assigned a value
-Info (12129): Elaborating entity "nmea_rx" using architecture "A:arch_nmea_rx" for hierarchy "nmea_rx:rx"
-Warning (10541): VHDL Signal Declaration warning at nmea_rx.vhd(11): used implicit default value for signal "readdata" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at nmea_rx.vhd(25): used implicit default value for signal "raz_n" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at nmea_rx.vhd(29): object "data_h" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at nmea_rx.vhd(29): object "data_m" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at nmea_rx.vhd(29): object "data_l" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at nmea_rx.vhd(29): used implicit default value for signal "data_synchro" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at nmea_rx.vhd(108): signal "raz_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (12127): Elaborating entity "nmea_rx" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at nmea_rx.vhd(15): used implicit default value for signal "txd_echo" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at nmea_rx.vhd(17): used implicit default value for signal "txd" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at nmea_rx.vhd(20): used implicit default value for signal "centaine_ok" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at nmea_rx.vhd(20): used implicit default value for signal "dizaine_ok" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at nmea_rx.vhd(20): used implicit default value for signal "unite_ok" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10540): VHDL Signal Declaration warning at nmea_rx.vhd(56): used explicit default value for signal "raz_n" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at nmea_rx.vhd(61): object "unite" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at nmea_rx.vhd(63): object "synchro" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at nmea_rx.vhd(68): object "s_centaine_ok" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at nmea_rx.vhd(68): object "s_dizaine_ok" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at nmea_rx.vhd(68): object "s_unite_ok" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at nmea_rx.vhd(149): signal "raz_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at nmea_rx.vhd(315): signal "s_multiplex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "txd_echo" is stuck at GND
+    Warning (13410): Pin "txd" is stuck at GND
+    Warning (13410): Pin "centaine_ok" is stuck at GND
+    Warning (13410): Pin "dizaine_ok" is stuck at GND
+    Warning (13410): Pin "unite_ok" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset_n"
-Info (21057): Implemented 129 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 255 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 124 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 705 megabytes
-    Info: Processing ended: Thu Nov 26 12:14:26 2020
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:53
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 235 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 704 megabytes
+    Info: Processing ended: Sat Dec 12 18:53:08 2020
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:52
 
 

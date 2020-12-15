@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Com_NMEA
-Thu Nov 26 12:15:24 2020
+Sat Dec 12 18:53:51 2020
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Nov 26 12:15:24 2020 ;
+; EDA Netlist Writer Status ; Successful - Sat Dec 12 18:53:51 2020 ;
 ; Revision Name             ; Com_NMEA                              ;
-; Top-level Entity Name     ; Com_NMEA                              ;
+; Top-level Entity Name     ; nmea_rx                               ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -89,7 +89,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu Nov 26 12:15:21 2020
+    Info: Processing started: Sat Dec 12 18:53:48 2020
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Com_NMEA -c Com_NMEA
 Info (204019): Generated file Com_NMEA_6_1200mv_85c_slow.vho in folder "E:/BE/SALAZAR_SANOGO_BINOME7/Com_NMEA_Q15/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file Com_NMEA_6_1200mv_0c_slow.vho in folder "E:/BE/SALAZAR_SANOGO_BINOME7/Com_NMEA_Q15/simulation/modelsim/" for EDA simulation tool
@@ -101,7 +101,7 @@ Info (204019): Generated file Com_NMEA_min_1200mv_0c_vhd_fast.sdo in folder "E:/
 Info (204019): Generated file Com_NMEA_vhd.sdo in folder "E:/BE/SALAZAR_SANOGO_BINOME7/Com_NMEA_Q15/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 569 megabytes
-    Info: Processing ended: Thu Nov 26 12:15:24 2020
+    Info: Processing ended: Sat Dec 12 18:53:51 2020
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
