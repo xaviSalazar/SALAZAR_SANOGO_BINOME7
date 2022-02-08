@@ -1,2 +1,2 @@
 # Projet Final VHDL
-[embed]Rapport & Video/Rapport_BE_Sanogo_Salazar.pdf[/embed]
+https://docs.google.com/viewer?url=${./Rapport & Video/Rapport_BE_Sanogo_Salazar.pdf}
